@@ -2,7 +2,7 @@ var fetch = require("node-fetch");
 module.exports = async function (context, req) {
     context.log('JavaScript HTTP trigger function processed a request.');
 
-    let subscriptionKey = '68d214be8eb24afb9d240f37e4a4ae74'
+    let subscriptionKey = '<YOUR KEY>'
     let endpoint = 'https://api.bing.microsoft.com/v7.0/search';
     
     const searchString = (req.query.searchString || (req.body && req.body.searchString));

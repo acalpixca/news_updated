@@ -1,0 +1,38 @@
+{
+  "name": "News... updated.",
+  "description": "Subscribe to the news you're reading, leverage Azure AI to receive updates from anywhere on the Web.",
+  "version": "1.0",
+  "manifest_version": 3,
+  "background": {
+    "service_worker": "background.js"
+  },
+  "permissions": ["storage", "activeTab", "scripting", "tabs"],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "/images/news16.png",
+      "32": "/images/news32.png",
+      "48": "/images/news48.png",
+      "128": "/images/news128.png"
+    }
+  },
+
+"content_scripts": [
+   {
+       "matches": ["*://*/*"],
+       "js": ["contentScript.js"]
+    }
+   ],
+
+  "icons": {
+    "16": "/images/news16.png",
+    "32": "/images/news32.png",
+    "48": "/images/news48.png",
+    "128": "/images/news128.png"
+  },
+  "options_page": "options.html"
+  //"options_ui": {
+  //  "page": "options.html",
+  //  "open_in_tab": false
+  //}
+}

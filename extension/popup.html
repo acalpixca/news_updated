@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="button.css">
+    <style>
+    .container {
+      height: 100px;
+      position: relative;
+      border: 1px solid grey;
+    }
+    .vertical-center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
+    }
+    table {
+      table-layout: auto;
+      width: 500px;
+    }
+  </style>
+  </head>
+  <body>
+    <!-- <button id="changeColor"></button> -->
+    <div id="trackedNewsListView">
+    <h3>News, Updated - News I'm tracking</h3>
+    <table>
+      <!--<thead>
+        <tr>
+          <th>Title</th>
+          <th>Alert</th>
+          <th>Action</th>
+          <th>Delete</th>
+        </tr>
+      </thead> -->
+      <tbody id="trackedNewsList">
+      </tbody>
+    </table>
+    <button id="addTrackedNews">Track this News</button>
+    <button id="emptyTrackedNews">Empty List</button>
+    <button id="testStuff" hidden>TestStuff</button>
+    <button id="hiddenButtonSearchWeb" hidden>Hidden</button>
+  </div>
+  <div id="oneNewsDetailView">
+    <h3>News, Updated - Full Trace</h3>
+    <!--<p>Iba Superman disfrazado de... Esto es la vista detallada de la noticia seleccionada.</p> -->
+    <table>
+      <thead>
+      </thead>
+      <tbody id="oneNewsDetailViewList">
+      </tbody>
+    </table>
+    <button id="closeDetailView">Close</button>
+  </div>
+  <div class="container"><span class="vertical-center">Powered by <img class="vertical-center" src="images/bingcognitive.png"></div>
+  <div><a href="https://privacy.microsoft.com/en-us/privacystatement">Microsoft Privacy Statement</a></div>
+  <!--  <script src="globals.js"></script> -->
+    <script src="invokeAzureAPI.js"></script>
+    <script src="news.js"></script>
+    <script src="blockchainext.js"></script>
+    <script src="popup.js"></script>
+  </body>
+</html>
